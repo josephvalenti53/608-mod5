@@ -1,1 +1,32 @@
+import pandas as pd
+grades = pd.Series([87, 100, 94])
+print(grades)
+grades[0]
+print(grades)
 
+grades_count = grades.count()
+print('Grades Count =' , grades_count)
+
+grades_mean = grades.mean()
+print('Grades Mean =' , grades_mean)
+
+grades_min = grades.min()
+print('Grades Minimum =' , grades_min)
+
+grades_max = grades.max()
+print('Grades Maximum =' , grades_max)
+
+grades_std = grades.std()
+print('Grades Std Dev =' , grades_std)
+
+grades_desc = grades.describe()
+print('Grades Description =' , grades_desc)
+
+grades = pd.Series([87, 100, 94], index=['Wally', 'Eva' , 'Sam'])
+print(grades)
+
+print('Eva =' , grades['Eva'])
+
+print('Wally =' , grades.Wally)
+
+print('Grade Values =' , grades.values)
